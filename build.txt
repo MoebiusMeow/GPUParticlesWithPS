@@ -1,0 +1,3 @@
+displayName = Particle Demo
+author = MoebiusMeow
+version = 0.1
