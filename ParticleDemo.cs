@@ -11,16 +11,16 @@ namespace ParticleDemo
     {
         public readonly int MAX_COUNT = 10000;          // N 
 
-        public Effect particleShader;			    	// 包括绘制粒子Pass和拷贝Pass
-        public Effect behaviorShader;			    	// 虚假的计算着色器，包含粒子行为计算Pass和初始化Pass
+        public Effect particleShader;                   // 包括绘制粒子Pass和拷贝Pass
+        public Effect behaviorShader;                   // 虚假的计算着色器，包含粒子行为计算Pass和初始化Pass
         
-        public Texture2D particleTexture;		    	// 粒子图形纹理
-        public RenderTarget2D computeRT;		    	// 记录每个粒子数据的纹理（N * 2），只含红绿通道代表x和y轴，两行分别代表位置和速度
+        public Texture2D particleTexture;               // 粒子图形纹理
+        public RenderTarget2D computeRT;                // 记录每个粒子数据的纹理（N * 2），只含红绿通道代表x和y轴，两行分别代表位置和速度
         public RenderTarget2D computeRTSwap;
 
-        ParticleVertexInfo[] singleParticleVertex;  	// 单个粒子的四个顶点
-        InstanceInfo[] particleInstance;		    	// 粒子实例列表，包含N个点
-        ParticleVertexInfo[] quadVertex;		    	// 用于绘制平凡的矩形的四个顶点，注意uv方向
+        ParticleVertexInfo[] singleParticleVertex;      // 单个粒子的四个顶点
+        InstanceInfo[] particleInstance;                // 粒子实例列表，包含N个点
+        ParticleVertexInfo[] quadVertex;                // 用于绘制平凡的矩形的四个顶点，注意uv方向
 
         VertexBuffer particleVBO = null;                // 存储实例（InstanceInfo）的Buffer （长度N）
         VertexBuffer singleParticleVBO = null;          // 存储单个粒子的四个顶点的Buffer （长度4）
